@@ -1,0 +1,102 @@
+<?php
+	session_start();
+	include('..\dbconnect.php');
+	include ('..\functions.php');
+
+	
+	$uid = $_SESSION['user'];
+	
+	if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: ..\login.php');
+}
+	
+	
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['user']);
+		header("location: ..\ProjectArt.php");
+}
+
+
+	$id=$_GET['id'];
+	$art_id=$_GET['art_id'];
+	$streetAdd = $_POST['streetAdd'];
+	$brgy = $_POST['brgy'];
+	$city = $_POST['city'];
+	$courier = $_POST['courier'];
+	
+	
+	$sql = "SELECT * FROM signup WHERE id = $id; ";
+	$first = '';
+	$last = '';
+	$contact = '';
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result)>0){
+		while($row = mysqli_fetch_array($result)){
+			$first = $row['first'];
+			$last = $row['last'];
+			$contact = $row['contact'];
+			
+		} 
+	}
+
+	$art_imagepath = '';
+	$art_title = '';
+	$date_purchase = date('Y/m/d');
+	$art_price = '';
+	$query_category1="SELECT * FROM artwork WHERE art_id = $art_id";
+    $result_category1 = mysqli_query($conn,$query_category1);
+	if(mysqli_num_rows($result_category1)>0){
+		while($row1 = mysqli_fetch_array($result_category1)){
+			$art_imagepath = $row1['art_imagepath'];
+			$art_title = $row1['art_title'];
+			$art_price = $row1['art_price'];
+			
+		} 
+	}
+
+
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Art Gallery | Buy now!</title>
+<link href="css/buy_page.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+	<div class= "top">
+		<span style="color:#1AB8C4;font-size: 60px">Order</span>
+		<span style="color:#000000; font-size: 60px">summary</span>
+	</div>
+	<hr>
+	<div class="middle">
+		<h1><?php echo $first,' ',$last;?></h1>
+		<p>User ID:<?php echo '$id';?></p>
+	</div>
+	<hr>
+	<div class= "container">
+		<div class="column">
+			<img src="../assets/img/<?php echo '$art_imagepath';?>" alt="the artwork to be bought">
+		</div>
+		<div class="column">
+			<h1>Title of the artwork</h1>
+			<p>Art id: <?php echo '$art_id';?></p>
+			<p>Date of purchase: <?php echo '$date_purchase';?></p> 
+		</div>
+		<div class="column">
+			<br><br><p1>Price: <?php echo '$art_price';?></p1>
+		</div>
+	</div>
+	<hr>
+	
+	<div class="bottom">
+		<p1>Proceed to buy?</p>
+		<a href=#>Buy</a>
+		<a href=#>Cancel</a>
+	</div>
+
+</body>
+</html>
