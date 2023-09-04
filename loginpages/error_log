@@ -1,0 +1,43 @@
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  include(..\dbconnect.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 2
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  include(): Failed opening '..\dbconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 2
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  include(..\functions.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 3
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  include(): Failed opening '..\functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 3
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 6
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  Undefined variable $_SESSION in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 9
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 9
+[03-Sep-2023 12:51:30 UTC] PHP Warning:  Undefined variable $conn in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 15
+[03-Sep-2023 12:51:30 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php:15
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php(15): mysqli_query(NULL, 'SELECT * FROM u...')
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 15
+[03-Sep-2023 12:52:26 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 6
+[03-Sep-2023 12:52:26 UTC] PHP Warning:  Undefined variable $_SESSION in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 9
+[03-Sep-2023 12:52:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 9
+[03-Sep-2023 12:52:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/irpnmlfm/public_html/art-gallery/functions.php:29) in /home/irpnmlfm/public_html/art-gallery/loginpages/ProjectArtUser.php on line 27
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  include(..\dbconnect.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 2
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  include(): Failed opening '..\dbconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 2
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  include(..\functions.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 3
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  include(): Failed opening '..\functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 3
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 5
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  Undefined variable $_SESSION in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 10
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 10
+[03-Sep-2023 12:53:46 UTC] PHP Warning:  Undefined variable $conn in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 18
+[03-Sep-2023 12:53:46 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php:18
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php(18): mysqli_query(NULL, 'SELECT * FROM u...')
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/loginpages/profile.php on line 18
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  include(..\dbconnect.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 2
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  include(): Failed opening '..\dbconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 2
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  include(..\functions.php): Failed to open stream: No such file or directory in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 3
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  include(): Failed opening '..\functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 3
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 5
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  Undefined variable $_SESSION in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 10
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 10
+[03-Sep-2023 12:53:53 UTC] PHP Warning:  Undefined variable $conn in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 13
+[03-Sep-2023 12:53:53 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php:13
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php(13): mysqli_query(NULL, 'SELECT * FROM u...')
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/loginpages/about_page_User.php on line 13

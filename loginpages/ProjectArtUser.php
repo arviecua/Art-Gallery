@@ -1,0 +1,76 @@
+<?php	
+
+    session_start();
+    ob_start();
+	include('../dbconnect.php');
+	include('../functions.php');
+	
+
+	
+	
+	$uid = $_SESSION['user'];
+	
+	// VIEW
+	$sql = "SELECT * FROM signup WHERE username = '$uid'; ";
+	
+	$first = '';
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result)>0){
+		while($row = mysqli_fetch_array($result)){
+			$first = $row['first'];
+		} 
+	}
+	
+	
+	mysqli_free_result($result);
+	
+	if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: ../login.php');
+}
+	
+	
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['user']);
+		header("location: ../ProjectArt.php");
+}
+
+?>
+
+<!doctype html>
+<html>
+<head>
+
+
+<meta charset="utf-8">
+<title>Homepage</title>
+<link href="css/stylesUser.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+  <div class="wrapper">
+	  <div class="logo">
+		  <img src="../assets/img/logonew.png" alt="">
+	  </div>
+	  <ul class="nav-area">
+	  	  <li><a href="ProjectArtUser.php"> Home </a> </li>
+		  <li><a href="about_page_User.php"> About </a> </li>
+		  <li><a href="artworksUser.php"> Artwork</a> </li>
+		  <li><a href="profile.php"><?php echo $first,' (User)'; ?></a> </li>
+		  <li><a href="ProjectArtUser.php?logout='1'">log out</a> </li>
+
+		  
+	  </ul>
+  </div>
+	
+  <div class="welcome-text">
+	  <h1>ART GALLERY</h1>
+	  <a href="#"> Contact Us</a>
+	
+	
+  </div>
+</header>
+</body>
+</html>

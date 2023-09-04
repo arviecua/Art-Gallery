@@ -1,0 +1,23 @@
+[03-Sep-2023 12:42:52 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'arvie'@'localhost' (using password: YES) in /home/irpnmlfm/public_html/art-gallery/dbconnect.php on line 2
+[03-Sep-2023 12:42:52 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home/irpnmlfm/public_html/art-gallery/artworks.php:42
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/artworks.php(42): mysqli_query(false, 'SELECT artwork....')
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/artworks.php on line 42
+[03-Sep-2023 12:42:59 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'arvie'@'localhost' (using password: YES) in /home/irpnmlfm/public_html/art-gallery/dbconnect.php on line 2
+[03-Sep-2023 12:42:59 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/irpnmlfm/public_html/art-gallery/login.php on line 3
+[03-Sep-2023 12:47:22 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/irpnmlfm/public_html/art-gallery/login.php:19
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/login.php(19): mysqli_num_rows(false)
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/login.php on line 19
+[03-Sep-2023 12:49:16 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/irpnmlfm/public_html/art-gallery/login.php:20
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/login.php(20): mysqli_num_rows(false)
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/login.php on line 20
+[03-Sep-2023 12:49:22 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/irpnmlfm/public_html/art-gallery/login.php:20
+Stack trace:
+#0 /home/irpnmlfm/public_html/art-gallery/login.php(20): mysqli_num_rows(false)
+#1 {main}
+  thrown in /home/irpnmlfm/public_html/art-gallery/login.php on line 20
